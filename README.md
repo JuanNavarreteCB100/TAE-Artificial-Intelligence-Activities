@@ -26,9 +26,9 @@ lr = 8.0
 n_steps = 120
 ```
 
-| Pérdida inicial | Pérdida final |
-|---|---|
-| 0.14262 | 0.14262 |
+                  | Pérdida inicial | Pérdida final |
+                  |---|---|
+                  | 0.14262 | 0.14262 |
 
 **Observación:** El punto de inicio queda lejos del mínimo global. Con 120 pasos y α=8, el modelo apenas empieza a desplazarse. La curva naranja no se ajusta bien a los datos — el descenso es visible en el contorno pero insuficiente para converger.
 
@@ -98,7 +98,7 @@ n_steps = 800
 
 ---
 
-### Experimento 6 — Convergencia exitosa ✓
+### Experimento 6 — Convergencia exitosa 
 
 ```python
 phi = np.array([1.0, 12.0])
