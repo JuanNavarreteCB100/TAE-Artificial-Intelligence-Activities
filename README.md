@@ -1,6 +1,6 @@
 # Math Warm-Up — TAE Inteligencia Artificial
 ## Modulo 4: Deep Learning
-# Docente: German Pinedo-Diaz
+# Docente: Dr. German Pinedo-Diaz
 
 ## Actividad 1.1 — Math Warm-Up
 Esta actividad estableció los fundamentos matemáticos sin los cuales el resto del curso no tendría sentido. El punto de partida fue entender la diferencia entre una función lineal pura y una función afín: aunque f(x)=β+ωxf(x) = \beta + \omega x f(x)=β+ωx dibuja una línea recta, el intercepto β\beta β rompe la propiedad de aditividad estricta. Esto no es un detalle menor — es la razón por la que en redes neuronales se habla técnicamente de "capas afines" aunque en la práctica se les llame lineales.
