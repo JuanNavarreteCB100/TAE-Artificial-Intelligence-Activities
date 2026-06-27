@@ -1,4 +1,4 @@
-# Notebook 3.1 — Optimización I: Descenso por Gradiente
+## Notebook 3.1 — Optimización I: Descenso por Gradiente
 ## Modulo 4: Deep Learning
 # Docente: Dr. German Pinedo-Diaz
 
