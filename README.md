@@ -1,6 +1,6 @@
 ## Notebook 3.1 — Optimización I: Descenso por Gradiente
 ## Modulo 4: Deep Learning
-# Docente: Dr. German Pinedo-Diaz
+## Docente: Dr. German Pinedo-Diaz
 
 ## Modelo
 $$
@@ -115,7 +115,6 @@ n_steps = 500
 ---
 
 ## Conclusiones
-
 | Factor | Efecto observado |
 |---|---|
 | α demasiado pequeño (0.5) | Convergencia extremadamente lenta, casi sin movimiento |
