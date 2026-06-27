@@ -1,4 +1,3 @@
-# Math Warm-Up — TAE Inteligencia Artificial
 ## Modulo 4: Deep Learning
 # Docente: Dr. German Pinedo-Diaz
 
