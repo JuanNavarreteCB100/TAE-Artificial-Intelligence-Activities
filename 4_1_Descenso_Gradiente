@@ -1,0 +1,20 @@
+# Inicializar parámetros y dibujar el modelo
+n_steps = 10
+phi_all = np.zeros((2,n_steps+1))
+phi_all[0,0] = 1.6
+phi_all[1,0] = -0.5
+
+# Medir la pérdida y dibujar el modelo inicial
+loss =  compute_loss(data[0,:], data[1,:], model, phi_all[:,0:1])
+draw_model(data,model,phi_all[:,0:1], "Parámetros iniciales, pérdida = %f"%(loss))
+
+# Repetir pasos de descenso por gradiente
+for c_step in range (n_steps):
+  # Ejecutar un paso de descenso por gradiente
+  phi_all[:,c_step+1:c_step+2] = gradient_descent_step(phi_all[:,c_step:c_step+1],data, model)
+  # Medir la pérdida y dibujar el modelo
+  loss =  compute_loss(data[0,:], data[1,:], model, phi_all[:,c_step+1:c_step+2])
+  draw_model(data,model,phi_all[:,c_step+1], "Iteración %d, pérdida = %f"%(c_step+1,loss))
+
+# Dibujar la trayectoria sobre la superficie de pérdida
+draw_loss_function(compute_loss, data, model,phi_all)
