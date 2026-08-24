@@ -3,42 +3,21 @@
 ## **Docente:** Dr. Germán Pinedo-Díaz  
 ## **Institución:** CINVESTAV
 
-## Actividades 1 — Math Warm-Up
-Fundamentos matemáticos necesarios para Deep Learning:
-**1.1 Math Warm-Up:** Funciones lineales y afines, funciones no lineales (ReLU, sigmoid, tanh), derivadas y gradientes como "brújula" de aprendizaje, implementación en NumPy y visualización de campos de gradiente.
-**1.2 Regresión Lineal 1D:** Modelo lineal f(x, φ₀, φ₁), función de pérdida cuadrática, optimización por descenso de coordenadas y visualización de la superficie de pérdida.
+En las siguientes actividades se reviso: Los fundamentos de las redes neuronales convolucionales (CNN): desde la operación de convolución 1D escrita a mano, pasando por su aplicación en una red convolucional real para clasificación (MNIST-1D), hasta la convolución 2D usada en visión por computadora.
 
-## Actividades 2 — Redes Neuronales
-Construcción e interpretación de redes neuronales de distinta profundidad:
+**6_1_1_D Convolución:** Implementación manual (sin librerías) de la convolución 1D con relleno de ceros, variando tamaño de kernel, paso (stride) y dilatación (conv_3_1_1_zp, conv_3_2_1_zp, conv_5_1_1_zp, conv_3_1_2_zp); interpretación de la convolución como suavizado y como aproximación de la derivada; representación de la convolución como multiplicación matricial (get_conv_mat_3_1_1_zp); análisis de la composición de convoluciones (dos convoluciones de kernel 3 equivalen a una de kernel 5).
 
-**2.1 Redes Superficiales:** Activación ReLU, red 1→3→1, regiones lineales, ajuste a datos y múltiples salidas.
-**2.2 Composición de Redes:** Apilamiento modular de dos redes; representaciones más ricas mediante composición funcional.
-**2.3 Redes Profundas:** Formulación matricial, arquitectura 4→5→2→4→1 y concatenación de redes.
-**2.4.1 Pérdida I — Regresión:** Likelihood, log-likelihood negativa y distribución gaussiana.
-**2.4.2 Pérdida II — Clasificación Binaria:** Sigmoide y binary cross-entropy.
-**2.4.3 Pérdida III — Clasificación Multiclase:** Softmax y entropía cruzada para K clases.
+**6_2_Convolución para MNIST-1D:** Construcción y entrenamiento de una red neuronal convolucional en PyTorch (nn.Conv1d) para clasificar la versión unidimensional de MNIST; arquitectura de tres capas convolucionales (kernel 3, paso 2, sin padding) con activación ReLU, seguidas de aplanamiento y una capa lineal final; entrenamiento con SGD, momentum y scheduler de tasa de aprendizaje; seguimiento de la pérdida y el error de clasificación en entrenamiento y validación por época.
 
-## Actividades 3 — Optimización I
-Experimentos de descenso por gradiente sobre el modelo Gabor `y(x) = sin(z)·exp(−z²/8)` con parámetros verdaderos φ₀=3.0, φ₁=15.0:
-
-**3.1 Descenso por Gradiente:** Seis experimentos que analizan el efecto de la tasa de aprendizaje y el punto inicial sobre la convergencia.
-
-## Actividades 4 — Optimización II
-Algoritmos de optimización avanzados para entrenar modelos de Deep Learning:
-
-**4.1 Descenso por Gradiente:** Pérdida de suma de cuadrados, gradiente analítico y búsqueda lineal del paso óptimo.
-**4.2 SGD:** SGD con paso fijo, mini-batch SGD y scheduler de tasa de aprendizaje.
-**4.3 Momentum:** Momentum estándar y Momentum de Nesterov comparados contra SGD.
-**4.4 Adam:** Gradientes normalizados, promedios móviles con corrección de sesgo y actualización adaptativa por parámetro.
+**6_3_2D_Convolución 2D:** Implementación manual de la convolución 2D en NumPy (conv_numpy_1 a conv_numpy_4), progresando desde un solo canal hasta soporte completo de lote, múltiples canales de entrada/salida, stride y padding; validación contra torch.nn.functional.conv2d mediante Error Absoluto Medio; comparación de rendimiento CPU vs. GPU (CUDA/MPS) para convoluciones a gran escala.
 
 ---
 
 ## Tecnologías
-- Python 3
-- NumPy
-- Matplotlib
-- Jupyter Notebook
-
+ * Python 3
+ * NumPy
+ * Matplotlib
+ * Jupyter Notebook
 
 ## Autor
 **Dr. Juan Navarrete Guzmán**  
